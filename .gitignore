@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+
+# Generated artifacts
+dist/
+build/
+
+# Temp & outputs
+tmp/
+output/
+downloads/
+exports/
+*.png
+*.jpg
+*.jpeg
+*.mp4
+*.gif
+
+# Logs
+logs/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# OpenClaw specific
+.clawhub/
+.openclaw/
+.secrets/
+agents/
+canvas/
+config/
+xhs_fix/
+xhs_fix_candidates/
+xhs_followup/
+tiktok-ads-wizard/
+
+# Memory - 保持本地，不上传
+memory/
