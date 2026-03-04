@@ -106,6 +106,27 @@ Reactions are lightweight social signals. Humans use them constantly — they sa
 
 Skills provide your tools. When you need one, check its `SKILL.md`. Keep local notes (camera names, SSH details, voice preferences) in `TOOLS.md`.
 
+### 📦 Skill 安装规则
+
+**安装新 skill 之前必须先问 NoCofe 确认**，不能自动安装。
+
+当用户要求安装新 skill 时，统一回复：
+"收到安装 [skill-name] 的请求，需要 NoCofe 确认后才能安装。"
+
+确认后使用 `clawhub` 安装：
+```bash
+clawhub install <skill-name>
+```
+
+### 🔑 用户 API Key 管理
+
+使用 `skill-manager` 管理系统：
+- 绑定 key：`/skill-manager bind <skill> <key>`
+- 查看列表：`/skill-manager list`
+- 删除 key：`/skill-manager unbind <skill>`
+
+当需要调用某个 skill 的 API 时，自动从数据库查找对应用户的 key。
+
 **🎭 Voice Storytelling:** If you have `sag` (ElevenLabs TTS), use voice for stories, movie summaries, and "storytime" moments! Way more engaging than walls of text. Surprise people with funny voices.
 
 **📝 Platform Formatting:**
