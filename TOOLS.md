@@ -49,6 +49,45 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 - 发图片到飞书前，先把图片放到 workspace 目录下（`/Users/jiangzhixuan/clawd/...`）再发送。
 - 如果图片在 workspace 之外，飞书端可能看不到图片或发送失败。
 
+## GuojiAdBizQuery（国际广告业务查询）
+
+- **skillKey**: guoji-ad-biz-query
+- **环境变量**: GUOJI_AD_TOKEN
+- **凭据文件**: `/Users/jiangzhixuan/clawd/memory/guoji-ad-token.json`（或从环境变量读取）
+
+### 三个查询工具
+
+| 工具 | 功能 | 触发场景 |
+|------|------|----------|
+| guoji_ad_base_info_get | 余额、账户数 | "查余额"、"还有多少钱"、"几个账户" |
+| guoji_ad_customer_info_get | 额度消耗 | "查额度"、"消耗多少"、"还能用几天" |
+| guoji_ad_work_list_get | 工单进度 | "查工单"、"开户进度"、"第N页" |
+
+### API 端点
+- `https://api-cheetahgo.cmcm.com/skill/api/base-info`
+- `https://cheetahgo-api.cmcm.com/skill/api/customer-info`
+- `https://cheetahgo-api.cmcm.com/skill/api/work-list?type=1&page=1`
+
+### 金额处理
+- base-info 金额单位是 cent，需要 ÷100 并加 `$` 前缀
+- customer-info 金额单位是 USD，直接加 `$` 前缀
+
+### 工单状态
+- 10→待处理, 20→处理中, 30→已完成, 40→已拒绝, 50→已撤销
+
+---
+
+## FastGrow API
+- API Key: fg_fCkB6_D4iWgi7sZcwC1ssXYJEWVt4APY6pcoDXEB1Ps
+- 组织ID: 9 (Zhixuan Jiang的组织)
+- 项目ID: 4b66e7197fcd4d4fba916d2588f07ef0
+
+## Agent Reach（互联网内容获取）
+- 安装：`pipx install https://github.com/Panniantong/agent-reach/archive/main.zip`
+- 诊断：`agent-reach doctor`
+- 技能文档：`/Users/jiangzhixuan/clawd/skills/agent-reach/SKILL.md`
+- 已解锁：GitHub、RSS、全网搜索、网页阅读、Twitter、微信公众号
+
 ## 文件管理规范
 
 ### 目录结构
